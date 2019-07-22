@@ -1,7 +1,7 @@
 {
-  "name": "node-fetch-cookies",
+  "name": "flumm-fetch-cookies",
   "version": "1.0.6",
-  "description": "node-fetch wrapper that adds support for cookie-jars",
+  "description": "flumm-fetch wrapper that adds support for cookie-jars",
   "main": "src/index.mjs",
   "engines": {
     "node": ">=10.0.0"
@@ -11,21 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkhsjdhjs/node-fetch-cookies.git"
+    "url": "git+https://gitfap.de/keinBot/flumm-fetch-cookies.git"
   },
   "keywords": [
     "cookie",
     "cookie-jar",
-    "node-fetch",
+    "flumm-fetch",
     "fetch"
   ],
+  "private": "true",
   "author": "jkhsjdhjs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jkhsjdhjs/node-fetch-cookies/issues"
+    "url": "https://gitfap.de/keinBot/flumm-fetch-cookies/issues"
   },
-  "homepage": "https://github.com/jkhsjdhjs/node-fetch-cookies#readme",
-  "dependencies": {
-    "node-fetch": "^2.6.0"
-  }
+  "homepage": "https://gitfap.de/keinBot/flumm-fetch-cookies#readme"
 }

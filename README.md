@@ -1,10 +1,10 @@
-# node-fetch-cookies
-A [node-fetch](https://github.com/bitinn/node-fetch) wrapper with support for cookies.
+# flumm-fetch-cookies
+A [flumm-fetch](https://gitfap.de/Flummi/kbotv3-modules/blob/master/src/inc/fetch.mjs) wrapper with support for cookies.
 It supports reading/writing from/to a JSON cookie jar and keeps cookies in memory until you call `CookieJar.save()` to reduce disk I/O.
 
 ## Usage Example
 ```javascript
-import {fetch, CookieJar} from "node-fetch-cookies";
+import {fetch, CookieJar} from "flumm-fetch-cookies";
 
 (async () => {
     // creates a CookieJar instance

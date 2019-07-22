@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import fetch from "./fetch";
 import CookieJar from "./cookie-jar";
 import Cookie from "./cookie";
 
@@ -35,8 +35,7 @@ async function cookieFetch(cookieJars, url, options) {
         options.headers.cookie = cookies.slice(0, -2);
     }
     const result = await fetch(url, options);
-    // i cannot use headers.get() here because it joins the cookies to a string
-    cookies = result.headers[Object.getOwnPropertySymbols(result.headers)[0]]["set-cookie"];
+    cookies = result.headers["set-cookie"]);
     if(cookies && cookieJars) {
         if(Array.isArray(cookieJars)) {
             cookieJars.forEach(jar => {
