@@ -2,7 +2,7 @@ import fetch from "./fetch";
 import CookieJar from "./cookie-jar";
 import Cookie from "./cookie";
 
-const cookieJar = new CookieJar("rw");
+const cookieJar = new CookieJar();
 
 export default async function cookieFetch(url, options) {
     let cookies = "";
