@@ -1,6 +1,6 @@
 {
   "name": "flumm-fetch-cookies",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "flumm-fetch wrapper that adds support for cookie-jars",
   "main": "src/index.mjs",
   "engines": {
