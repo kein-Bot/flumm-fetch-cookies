@@ -108,6 +108,12 @@ export default class Cookie {
         if(!this.expiry)
             this.expiry = null;
     }
+    static fromObject(obj) {
+        let c = Object.assign(Object.create(this.prototype), obj);
+        if(typeof c.expiry === "string")
+            c.expiry = new Date(c.expiry);
+        return c;
+    }
     serialize() {
         return this.name + "=" + this.value;
     }
