@@ -1,4 +1,4 @@
-import Cookie from "./cookie";
+import Cookie from "./cookie.mjs";
 import url from "url";
 
 export default class CookieJar {

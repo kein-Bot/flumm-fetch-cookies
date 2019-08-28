@@ -1,6 +1,6 @@
-import fetch from "./fetch";
-import CookieJar from "./cookie-jar";
-import Cookie from "./cookie";
+import fetch from "./fetch.mjs";
+import CookieJar from "./cookie-jar.mjs";
+import Cookie from "./cookie.mjs";
 
 const cookieJar = new CookieJar();
 
