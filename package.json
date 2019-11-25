@@ -1,6 +1,6 @@
 {
   "name": "flumm-fetch-cookies",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "flumm-fetch wrapper that adds support for cookie-jars",
   "main": "src/index.mjs",
   "engines": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitfap.de/keinBot/flumm-fetch-cookies.git"
+    "url": "git+https://github.com/kein-Bot/flumm-fetch-cookies.git"
   },
   "keywords": [
     "cookie",
@@ -19,11 +19,10 @@
     "flumm-fetch",
     "fetch"
   ],
-  "private": "true",
-  "author": "jkhsjdhjs",
+  "author": "flummi & jkhsjdhjs",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitfap.de/keinBot/flumm-fetch-cookies/issues"
+    "url": "https://github.com/kein-Bot/flumm-fetch-cookies/issues"
   },
-  "homepage": "https://gitfap.de/keinBot/flumm-fetch-cookies#readme"
+  "homepage": "https://github.com/kein-Bot/flumm-fetch-cookies#readme"
 }
