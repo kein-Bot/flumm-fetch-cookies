@@ -1,4 +1,4 @@
-import fetch from "./fetch.mjs";
+import fetch from "flumm-fetch";
 import CookieJar from "./cookie-jar.mjs";
 import Cookie from "./cookie.mjs";
 
