@@ -1,13 +1,12 @@
-import fetch from "flumm-fetch";
+import _fetch from "flumm-fetch";
 import CookieJar from "./cookie-jar.mjs";
 import Cookie from "./cookie.mjs";
 
 const cookieJar = new CookieJar();
 
-export default async function cookieFetch(url, options) {
+export default async function fetch(url, options) {
     let cookies = "";
     [...cookieJar.cookiesValidForRequest(url)]
-        .filter((v, i, a) => a.slice(0, i).every(c => c.name !== v.name)) // filter cookies with duplicate names
         .forEach(c => cookies += c.serialize() + "; ");
 
     if(cookies) {
@@ -30,3 +29,4 @@ export default async function cookieFetch(url, options) {
 }
 
 export {cookieJar, CookieJar, Cookie};
+
