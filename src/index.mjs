@@ -17,7 +17,7 @@ export default async function fetch(url, options) {
         options.headers.cookie = cookies.slice(0, -2);
     }
 
-    const result = await fetch(url, options);
+    const result = await _fetch(url, options);
 
     cookies = result.headers["set-cookie"] || [];
     cookies.forEach(c => cookieJar.addCookie(c, url));
