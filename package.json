@@ -1,6 +1,6 @@
 {
   "name": "flumm-fetch-cookies",
-  "version": "1.3.4",
+  "version": "1.3.4-1",
   "description": "flumm-fetch wrapper that adds support for cookie-jars",
   "main": "src/index.mjs",
   "engines": {
@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/kein-Bot/flumm-fetch-cookies#readme",
   "dependencies": {
-    "flumm-fetch": "^1.0.0"
+    "flumm-fetch": "^1.0.1"
   }
 }
