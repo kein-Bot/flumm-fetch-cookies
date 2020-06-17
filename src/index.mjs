@@ -1,6 +1,9 @@
 import _fetch from "flumm-fetch";
 import CookieJar from "./cookie-jar.mjs";
 import Cookie from "./cookie.mjs";
+import {paramError, CookieParseError} from "./errors.mjs";
+
+const redirectStatus = new Set([301, 302, 303, 307, 308]);
 
 const cookieJar = new CookieJar();
 
@@ -17,6 +20,13 @@ export default async function fetch(url, options) {
         options.headers.cookie = cookies.slice(0, -2);
     }
 
+    const wantFollow =
+        !options || !options.redirect || options.redirect === "follow";
+    if (wantFollow) {
+        if (!options) options = {};
+        options.redirect = "manual";
+    }
+
     const result = await _fetch(url, options);
 
     cookies = result.headers["set-cookie"] || [];
@@ -24,6 +34,12 @@ export default async function fetch(url, options) {
 
     // delete expired cookies after each request
     cookieJar.deleteExpired(false);
+
+    if (wantFollow && redirectStatus.has(result.status)) {
+        const location = result.headers.get("Location");
+        options.redirect = "follow";
+        return fetch(cookieJars, location, options);
+    }
 
     return result;
 }
