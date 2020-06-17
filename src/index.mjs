@@ -8,15 +8,14 @@ const redirectStatus = new Set([301, 302, 303, 307, 308]);
 const cookieJar = new CookieJar();
 
 export default async function fetch(url, options) {
-    let cookies = "";
-    [...cookieJar.cookiesValidForRequest(url)].forEach(
-        c => (cookies += c.serialize() + "; ")
-    );
+    let cookies = [...cookieJar.cookiesValidForRequest(url)]
+        .map(c => c.serialize())
+        .join("; ");
 
     if (cookies) {
         if (!options) options = {};
         if (!options.headers) options.headers = {};
-        options.headers.cookie = cookies.slice(0, -2);
+        options.headers.cookie = cookies;
     }
 
     const wantFollow =
