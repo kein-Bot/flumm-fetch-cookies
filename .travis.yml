@@ -14,4 +14,4 @@ deploy:
     on:
         branch: master
         tags: true
-        repo: jkhsjdhjs/node-fetch-cookies
+        repo: kein-Bot/flumm-fetch-cookies
